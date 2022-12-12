@@ -30,10 +30,9 @@ public class AlunoController {
     }
 
 
-    @PutMapping ("/atualizarAluno/{matricula}")
-    public ResponseEntity<Object> atualizarAluno(@PathVariable("matricula") Long matricula){
+    @PutMapping ("/atualizarAluno")
+    public ResponseEntity<Object> atualizarAluno(@RequestBody AlunoModel alunoModel){
         try{
-            AlunoModel alunoModel = alunoService.findAlunoByMatricula(matricula);
             alunoService.atualizarAluno(alunoModel);
             return ResponseEntity.status(HttpStatus.OK).body("Cadastro atualizado com sucesso");
         }catch (Exception e){
@@ -62,10 +61,10 @@ public class AlunoController {
         }
     }
 
-    @GetMapping("/inativarAluno/{id}")
-    public ResponseEntity<Object> inativarAluno(@PathVariable Long id){
+    @GetMapping("/inativarAluno/{matricula}")
+    public ResponseEntity<Object> inativarAluno(@PathVariable("matricula") Long matricula){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(alunoService.inativarAluno(id));
+            return ResponseEntity.status(HttpStatus.OK).body(alunoService.inativarAluno(matricula));
         }catch (Exception e){
             log.error("Ocorreu um erro ao inativar a matrícula do aluno", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());

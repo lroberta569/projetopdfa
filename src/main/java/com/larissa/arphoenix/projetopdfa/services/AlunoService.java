@@ -28,6 +28,7 @@ public class AlunoService {
     public String inativarAluno(Long matricula){
        AlunoModel alunoModel = findAlunoByMatricula(matricula);
        alunoModel.setStatusMatricula(StatusMatricula.INATIVO);
+       alunoRepository.save(alunoModel);
        return "Aluno inativado com sucesso";
     }
 
@@ -42,6 +43,7 @@ public class AlunoService {
     public AlunoModel atualizarAluno(AlunoModel alunoModel){
        AlunoModel aluno = findAlunoByMatricula(alunoModel.getMatriculaAluno());
        BeanUtils.copyProperties(alunoModel, aluno);
+       aluno.setStatusMatricula(StatusMatricula.ATIVO);
        return alunoRepository.save(aluno);
        }
 
