@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio_Alunos_Unoesc" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="723c5b63-1da7-4637-936f-c709b5d7e36e">
+        <style name="default">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$V{REPORT_COUNT}%2==0]]></conditionExpression>
+            <style backcolor="#D6D6D6"/>
+        </conditionalStyle>
+    </style>
+<!--    <style name="default" isDefault="true" fontName="DejaVu Sans"/>-->
+    <field name="matriculaAluno" class="java.lang.Long">
+    </field>
+    <field name="curso" class="java.lang.String">
+    </field>
+    <field name="emailAluno" class="java.lang.String">
+    </field>
+    <field name="nomeAluno" class="java.lang.String">
+    </field>
+    <field name="statusMatricula" class="java.lang.Object">
+    </field>
+    <field name="telefoneAluno" class="java.lang.String">
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="71" splitType="Stretch">
+            <image>
+                <reportElement x="40" y="7" width="89" height="63" uuid="9fecb2d7-0496-427d-a0ce-9216680ba2f3"/>
+                <imageExpression><![CDATA["D:/Projetos/Java/ProjetoPDFA/src/main/resources/Unoesc/unoesc.jpg"]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="40" y="7" style="default" width="516" height="62" uuid="b4de6322-6cb2-4b38-8c28-bfc546c87367"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="30" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Relatório de Alunos]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="28" splitType="Stretch">
+            <rectangle>
+                <reportElement x="-1" y="4" width="555" height="23" forecolor="#D6D6D6" backcolor="#D6D6D6" uuid="fe6d23d5-ad62-4170-8b4f-ea3c35bf2602">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineColor="#D6D6D6"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="0" y="4" width="60" height="23" uuid="dffddc08-1205-4119-8cef-7fd0c7a14b5c">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <text><![CDATA[Matrícula]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="60" y="4" style="default" width="110" height="23" uuid="45d4ca13-c3ec-4bc5-a467-6acc961c03e9">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <text><![CDATA[Nome do Aluno]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="4" style="default" width="132" height="23" uuid="77df6bd2-5536-4c3a-afa3-773739f7f757">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <text><![CDATA[Email]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="391" y="4" style="default" width="88" height="23" uuid="1a57517a-e300-42c8-971f-affe90c455c9">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <text><![CDATA[Curso]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="479" y="4" style="default" width="75" height="23" uuid="70da3eff-f515-4bfb-932b-428dab21daa1">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <text><![CDATA[Status Matrícula]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="169" y="4" style="default" width="90" height="23" uuid="71b0e04c-a587-4644-864b-3e725a6ac51c">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <text><![CDATA[Telefone]]></text>
+            </staticText>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="22" splitType="Stretch">
+            <textField>
+                <reportElement key="" mode="Opaque" x="0" y="0" style="default" width="60" height="18" uuid="ec4ef72a-6069-451a-ab21-0a45f900a19b">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                    <paragraph lineSpacingSize="1.0"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{matriculaAluno}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement key="" mode="Opaque" x="391" style="default" y="0" width="88" height="18" uuid="e1dfecdc-7e6e-4223-9476-5cfe3fd38522">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                    <paragraph lineSpacingSize="1.0"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{curso}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement key="" mode="Opaque" x="259" style="default" y="0" width="132" height="18" uuid="6208f587-8a7f-4db5-a08b-21edc8d2e877">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                    <paragraph lineSpacingSize="1.0"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{emailAluno}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement key="" mode="Opaque" x="60" style="default" y="0" width="110" height="18" uuid="5d24da03-4142-4ab8-a384-3160f6c1132e">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                    <paragraph lineSpacingSize="1.0"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nomeAluno}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement key="" mode="Opaque" x="479" style="default" y="0" width="75" height="18" uuid="7ee58557-89eb-49e1-b847-e6589563569a">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                    <paragraph lineSpacingSize="1.0"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String"><![CDATA[$F{statusMatricula}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement key="" mode="Opaque" x="169" style="default" y="0" width="90" height="18" uuid="99701627-c99b-411b-a0ba-5b7fd4cd2402">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                    <paragraph lineSpacingSize="1.0"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{telefoneAluno}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="50">
+            <textField evaluationTime="Page">
+                <reportElement stretchType="ContainerBottom" x="245" style="default" y="30" width="62" height="16" uuid="52e42bab-3dbb-469c-83b5-b7b206479317"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Helvetica" size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>

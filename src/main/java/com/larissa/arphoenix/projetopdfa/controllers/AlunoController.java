@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
-@RestController
+@RestController("/alunos")
 @CrossOrigin(origins = "*")
 public class AlunoController {
 
@@ -61,7 +61,7 @@ public class AlunoController {
         }
     }
 
-    @GetMapping("/inativarAluno/{matricula}")
+    @PutMapping("/inativarAluno/{matricula}")
     public ResponseEntity<Object> inativarAluno(@PathVariable("matricula") Long matricula){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(alunoService.inativarAluno(matricula));
@@ -70,6 +70,5 @@ public class AlunoController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
-
 
 }
