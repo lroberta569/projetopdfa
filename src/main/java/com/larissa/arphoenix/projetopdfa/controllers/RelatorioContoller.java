@@ -19,15 +19,13 @@ import java.util.List;
 public class RelatorioContoller {
 
     @Autowired
-    private AlunoService alunoService;
-    @Autowired
     private RelatorioService relatorioService;
 
     @GetMapping("/relatorioAlunos")
-    public ResponseEntity<Object> gerarRelatorioAlunos(){
+    public ResponseEntity<Object> gerarRelatorioAlunos() throws Throwable {
         try{
-            List<AlunoModel> listaAlunos = alunoService.findAll();
-            return ResponseEntity.status(HttpStatus.OK).body(relatorioService.exportarRelatorio(listaAlunos));
+            relatorioService.relatorioAlunos();
+            return ResponseEntity.status(HttpStatus.OK).body("Relátorio gerado com sucesso");
         }catch (Exception e){
             log.error("Ocorreu um erro ao inativar a matrícula do aluno", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());

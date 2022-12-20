@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio_Alunos_Unoesc" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="723c5b63-1da7-4637-936f-c709b5d7e36e">
-        <style name="default">
+    <property name="net.sf.jasperreports.export.pdfa.conformance" value="pdfa1a" />
+    <property name="net.sf.jasperreports.default.pdf.font.name" value="net/sf/jasperreports/fonts/arial/Arial.ttf"/>
+    <property name="net.sf.jasperreports.default.pdf.embedded" value="true"/>
+    <style name="default">
         <conditionalStyle>
             <conditionExpression><![CDATA[$V{REPORT_COUNT}%2==0]]></conditionExpression>
             <style backcolor="#D6D6D6"/>
         </conditionalStyle>
     </style>
-<!--    <style name="default" isDefault="true" fontName="DejaVu Sans"/>-->
     <field name="matriculaAluno" class="java.lang.Long">
     </field>
     <field name="curso" class="java.lang.String">
@@ -27,12 +29,12 @@
         <band height="71" splitType="Stretch">
             <image>
                 <reportElement x="40" y="7" width="89" height="63" uuid="9fecb2d7-0496-427d-a0ce-9216680ba2f3"/>
-                <imageExpression><![CDATA["D:/Projetos/Java/ProjetoPDFA/src/main/resources/Unoesc/unoesc.jpg"]]></imageExpression>
+                <imageExpression><![CDATA["src/main/resources/Unoesc/unoesc.jpg"]]></imageExpression>
             </image>
             <staticText>
                 <reportElement x="40" y="7" style="default" width="516" height="62" uuid="b4de6322-6cb2-4b38-8c28-bfc546c87367"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="30" isBold="true"/>
+                    <font fontName="Arial" size="30" isBold="true"/>
                 </textElement>
                 <text><![CDATA[Relatório de Alunos]]></text>
             </staticText>
@@ -56,7 +58,7 @@
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <text><![CDATA[Matrícula]]></text>
             </staticText>
@@ -65,7 +67,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <text><![CDATA[Nome do Aluno]]></text>
             </staticText>
@@ -74,7 +76,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <text><![CDATA[Email]]></text>
             </staticText>
@@ -83,7 +85,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <text><![CDATA[Curso]]></text>
             </staticText>
@@ -93,7 +95,7 @@
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <text><![CDATA[Status Matrícula]]></text>
             </staticText>
@@ -102,7 +104,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <text><![CDATA[Telefone]]></text>
             </staticText>
@@ -115,7 +117,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                     <paragraph lineSpacingSize="1.0"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{matriculaAluno}]]></textFieldExpression>
@@ -125,7 +127,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                     <paragraph lineSpacingSize="1.0"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{curso}]]></textFieldExpression>
@@ -135,7 +137,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                     <paragraph lineSpacingSize="1.0"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{emailAluno}]]></textFieldExpression>
@@ -146,7 +148,7 @@
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                     <paragraph lineSpacingSize="1.0"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{nomeAluno}]]></textFieldExpression>
@@ -157,7 +159,7 @@
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                     <paragraph lineSpacingSize="1.0"/>
                 </textElement>
                 <textFieldExpression class="java.lang.String"><![CDATA[$F{statusMatricula}]]></textFieldExpression>
@@ -168,7 +170,7 @@
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
                 </reportElement>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                     <paragraph lineSpacingSize="1.0"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{telefoneAluno}]]></textFieldExpression>
@@ -180,7 +182,7 @@
             <textField evaluationTime="Page">
                 <reportElement stretchType="ContainerBottom" x="245" style="default" y="30" width="62" height="16" uuid="52e42bab-3dbb-469c-83b5-b7b206479317"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Helvetica" size="8"/>
+                    <font fontName="Arial" size="8"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
             </textField>
